@@ -1,0 +1,27 @@
+# Copy of unitree_rl_gym/deploy/deploy_mujoco/configs/g1.yaml
+# Only change: cmd_init (last line) — adds a constant yaw-rate command.
+policy_path: "{LEGGED_GYM_ROOT_DIR}/deploy/pre_train/g1/motion.pt"
+xml_path: "{LEGGED_GYM_ROOT_DIR}/resources/robots/g1_description/scene.xml"
+
+simulation_duration: 20.0
+simulation_dt: 0.002
+control_decimation: 10
+
+kps: [100, 100, 100, 150, 40, 40, 100, 100, 100, 150, 40, 40]
+kds: [2, 2, 2, 4, 2, 2, 2, 2, 2, 4, 2, 2]
+
+default_angles: [-0.1,  0.0,  0.0,  0.3, -0.2, 0.0,
+                  -0.1,  0.0,  0.0,  0.3, -0.2, 0.0]
+
+ang_vel_scale: 0.25
+dof_pos_scale: 1.0
+dof_vel_scale: 0.05
+action_scale: 0.25
+cmd_scale: [2.0, 2.0, 0.25]
+num_actions: 12
+num_obs: 47
+
+# [vx (m/s), vy (m/s), yaw rate (rad/s)]
+# original: [0.5, 0, 0]  -> straight line
+# circle:   [0.5, 0, 0.5] -> radius ~ vx / wz = 1 m
+cmd_init: [0.5, 0, 0.5]

@@ -1,0 +1,12 @@
+diff --git a/deploy/deploy_mujoco/configs/g1.yaml b/deploy/deploy_mujoco/configs/g1.yaml
+index db18fdf..976fccc 100644
+--- a/deploy/deploy_mujoco/configs/g1.yaml
++++ b/deploy/deploy_mujoco/configs/g1.yaml
+@@ -23,4 +23,4 @@ cmd_scale: [2.0, 2.0, 0.25]
+ num_actions: 12
+ num_obs: 47
+ 
+-cmd_init: [0.5, 0, 0]
+\ No newline at end of file
++cmd_init: [0.5, 0, 0.5]
+\ No newline at end of file
